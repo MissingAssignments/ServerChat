@@ -22,7 +22,8 @@ def write_file(filename,text):
 
 write_file("port.txt", str(int(read_file("port.txt"))+1))
 num = int(read_file("num.txt"))
-port = int(raw_input("Eneter a port"))
+port = int(raw_input("Enter a port:"))
+username = raw_input("Eneter a Username:")
 #port, num = int(read_file("port.txt")), int(read_file("num.txt"))
 print "Num:",num
 print "Port:",port
@@ -83,7 +84,7 @@ class Client:
             data = self.sock.recv(1024)
             if not data:
                 break
-            print("\nUser:")
+            print "\n"+username+":"
             print(data)
             print("")
 
